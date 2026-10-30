@@ -1,0 +1,568 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #282c3f;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    background: white;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fc8019;
+    letter-spacing: -2px;
+}
+
+.logo span,
+.footer-brand span {
+    color: #282c3f;
+}
+
+.location {
+    line-height: 1.7;
+}
+
+.location strong {
+    border-bottom: 2px solid #282c3f;
+    font-size: 14px;
+}
+
+.location p {
+    color: #686b78;
+    font-size: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #282c3f;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #fc8019;
+}
+
+.get-app {
+    background: #fc8019;
+    color: white;
+    border: none;
+    padding: 13px 19px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+/* HERO */
+.hero {
+    background: #fc8019;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 6%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 55%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero-left,
+.hero-right {
+    width: 19%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.hero-search,
+.food-search {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.hero-search input,
+.food-search input {
+    flex: 1;
+    height: 100%;
+    padding: 0 18px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    min-width: 0;
+}
+
+.hero-search button,
+.food-search button {
+    border: none;
+    background: white;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #fc8019;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.section {
+    padding: 45px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.section h2 {
+    font-size: 25px;
+    margin-bottom: 28px;
+    font-weight: 800;
+}
+
+/* FOOD CATEGORIES */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+}
+
+.food-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.food-item p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+/* RESTAURANT CARDS */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.restaurant-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 12px 5px;
+}
+
+.restaurant-info h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.restaurant-info p {
+    color: #686b78;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.restaurant-info .rating {
+    color: #168c42;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* OFFERS */
+.offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.offer-card {
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.offer-one {
+    background: #fff0e4;
+}
+
+.offer-two {
+    background: #fff3e8;
+}
+
+.offer-card p {
+    color: #fc8019;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.offer-card h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.offer-card h4 {
+    font-size: 12px;
+    color: #686b78;
+    margin-bottom: 15px;
+}
+
+.offer-card button {
+    border: none;
+    background: #fc8019;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.offer-card img {
+    width: 38%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+.footer {
+    background: #02060c;
+    color: white;
+    padding: 50px 35px 20px;
+    margin-top: 20px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 35px;
+    color: #fc8019;
+    margin-bottom: 15px;
+}
+
+.footer-brand span {
+    color: white;
+}
+
+.footer-brand p {
+    color: #a0a0a0;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    color: #a0a0a0;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.footer-column a:hover {
+    color: #fc8019;
+}
+
+.footer-column .social-heading {
+    margin-top: 25px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 29px;
+    }
+
+    .location {
+        margin-left: auto;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .get-app {
+        display: none;
+    }
+
+    /* HERO MOBILE */
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .hero-left,
+    .hero-right {
+        display: none;
+    }
+
+    .hero-search,
+    .food-search {
+        height: 48px;
+    }
+
+    .hero-search input,
+    .food-search input {
+        font-size: 11px;
+    }
+
+    /* CONTENT */
+    .container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 12px;
+    }
+
+    .food-item p {
+        font-size: 11px;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .restaurant-card img {
+        height: 125px;
+    }
+
+    .restaurant-info h3 {
+        font-size: 14px;
+    }
+
+    .restaurant-info p {
+        font-size: 10px;
+    }
+
+    /* OFFERS */
+    .offers {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px 0;
+    }
+
+    .offer-card {
+        min-height: 170px;
+        padding: 15px;
+    }
+
+    .offer-card h2 {
+        font-size: 20px;
+    }
+
+    .offer-card img {
+        height: 120px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 35px 20px 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+
+    .footer-brand h2 {
+        font-size: 28px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 360px) {
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 21px;
+    }
+}
